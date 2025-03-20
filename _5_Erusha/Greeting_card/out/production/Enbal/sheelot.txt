@@ -1,0 +1,38 @@
+Here are the translated questions and their answers:
+A)
+    What happened when we called toString() on a BirthdayCard object?
+    The toString() method from the parent class GreetingCard is used
+    However, the greetingMsg() call inside toString() uses the overridden version from BirthdayCard
+    Therefore, we get the format "Dear [recipient]," and the general structure from the parent class,
+    but with a personalized birthday greeting
+B)
+What is the relationship between AdultBirthday, YouthBirthday, and BirthdayCard classes?1. Relationship between AdultBirthday, YouthBirthday, and BirthdayCard:
+Both AdultBirthday and YouthBirthday inherit from BirthdayCard
+BirthdayCard is parent, others are children
+
+2. Relationship with GreetingCard:
+GreetingCard -> BirthdayCard -> AdultBirthday/YouthBirthday
+Multi-level inheritance hierarchy
+
+3. GreetingCard methods:
+- setRecipient(String)
+- greetingMsg()
+- toString()
+- Object class methods
+
+4. AdultBirthday methods:
+- own greetingMsg()
+- inherited setRecipient()
+- inherited toString()
+- Object class methods
+
+5. WeddingCard setRecipient methods:
+Has 2 methods through overloading:
+- setRecipient(String bride, String groom)
+- inherited setRecipient(String)
+
+6. toString() execution:
+gc.toString() - uses GreetingCard methods
+we.toString() - uses GreetingCard toString but WeddingCard greetingMsg
+adultBirth.toString() - uses GreetingCard toString but AdultBirthday greetingMsg
+Shows polymorphism in action
